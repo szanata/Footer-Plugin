@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="author" content="Stéfano Stypulkowski">
+		<meta name="description" content="a html page to test the Footer Plguin">
+		
+		<title>The Footer Plugin - Demonstration</title>
+		
+		<style type="text/css">
+			*{
+				outline:0px;
+			}
+			body {
+				margin:0px;
+				padding:0px;
+				font-family:Tahome, Helvetica, Arial;
+				font-weight:bolder;
+				color:#fff;
+				background-color:#ccc;
+			}
+			#menu, #menuShadow{
+				-o-border-raius:5px;
+				-moz-border-radius:5px;
+				-webkit-border-radius:5px;
+				position:fixed;
+			}
+			#menu{
+				right:20px;
+				top:110px;
+				-moz-opacity:0.8;
+				opacity:0.8;
+				filter:alpha(opacity = 80);
+				padding:10px;
+				border:2px solid #000;
+				background-color:#777;
+				height:150px;
+				z-index:2;
+			}
+			#menuShadow{
+				top:120px;
+				height:174px;
+				z-index:1;
+				-moz-opacity:0.9;
+				opacity:0.9;
+				filter:alpha(opacity = 90);
+				background-color:#000000;
+			}
+			#menu div{
+				padding:3px;
+				margin:2px;
+				float:left;
+				background-color:#000;
+				border:1px solid #000;
+				font-size:18px;
+			}
+			#footer{
+				height: 60px;
+				width: 100%;
+				background-color:#00ff00;
+				font-size: 30px;
+			}
+			#content{
+				height: 300px;
+				background-color:#8000ff;
+				font-size: 120px;
+			}
+		</style>
+		
+		<script src="jquery-1.4.2.min.js" type="text/javascript"></script>
+		<script src="jquery.footer-1.0.2.min.js" type="text/javascript" ></script>
+		<script type="text/javascript">
+			
+			Resize = {
+				increase: function(what, howMuch){
+					$(what).height($(what).height() + howMuch);
+				},
+				decrease: function(what, howMuch, minimum){
+					if (($(what).height() - howMuch) >= minimum) {
+						$(what).height($(what).height() - howMuch);
+					}else{
+						$(what).height(minimum);
+					}
+				}
+			}
+			$(function(){
+				
+				$("#menuShadow").width($("#menu").width() + 24);
+				
+				$("#p1").bind("click", function(){Resize.increase("#content",1);});
+				$("#p10").bind("click", function(){Resize.increase("#content",10);});
+				$("#p100").bind("click", function(){Resize.increase("#content",100);});
+				
+				$("#m1").bind("click", function(){Resize.decrease("#content",1,150);});
+				$("#m10").bind("click", function(){Resize.decrease("#content",10,150);});
+				$("#m100").bind("click", function(){Resize.decrease("#content",100,150);});
+				
+				$("#fp").bind("click",function(){Resize.increase("#footer",10);});
+				$("#fm").bind("click",function(){Resize.decrease("#footer",10,50);});
+				
+				$("#footer").footer({timeOut:30});
+			});
+		</script>
+    </head>
+   	<body>
+    	<div id="menuShadow"></div>
+		<div id="menu">
+			<span>Change the page size to view the plugin working.</span><br/>
+			<div>
+				<span>Add div#content height</span><br/>
+				<button id="p1">Add 1 pixel</button><br/>
+				<button id="p10">Add 10 pixel</button><br/>
+				<button id="p100">Add 100 pixel</button><br/>
+			</div>
+			<div>
+				<span>Remove div#content height</span><br/>
+				<button id="m1">Remove 1 pixel</button><br/>
+				<button id="m10">Remove 10 pixel</button><br/>
+				<button id="m100">Remove 100 pixel</button><br/>
+			</div>
+			<div>
+				<span>Change div#footer size</span><br/>
+				<button id="fp">Add 10 pixel</button><br/>
+				<button id="fm">Remove 10 pixel</button><br/>
+			</div>
+		</div>    	
+        <div id="wrapper">
+			<div id="content">
+				<span>I'm the div#content!</span>
+        	</div>
+		</div>
+		<div id="footer">
+			<span>I'm the div#footer!</span>
+		</div>
+    </body>
+</html>
