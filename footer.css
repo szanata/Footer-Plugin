@@ -2,6 +2,8 @@
 	font-family:"RAGE";
 	src:url("RAGE.TTF");
 }
+
+
 *{
 	outline:0px none;
 }
@@ -24,7 +26,10 @@ body {
 	top:0px;
 	z-index:3;
 	min-width:800px;
-	background-color:#000000;
+	background: #7d7e7d; /* old browsers */
+  background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* ie */
 }
 #logo{
 	width:600px;
@@ -77,8 +82,11 @@ body {
 	top:180px;
 	width:100%;
 	min-width:800px;
-	background-color:#F4F4F4;
 	text-align:center;
+  background: #ffffff; /* old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* firefox */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* webkit */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* ie */
 }
 #menu a{
 	float:left;
