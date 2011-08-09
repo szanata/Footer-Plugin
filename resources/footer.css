@@ -62,9 +62,6 @@ body {
 /**
  * menu
  */
-.downloadLink{
-	background-color:#E6820E!important;
-}
 #menu{
 	position:absolute;
 	top:180px;
@@ -96,6 +93,9 @@ body {
 #menu a.active{
 	color:#ffffff;
 	background-color:#808080;
+}
+#download-link{
+	background-color:#E6820E;
 }
 
 /**
