@@ -23,7 +23,7 @@ $(function (){
     go: function (page){
       $('#menu a').removeClass('active');
       $('a[href="#' + page + '"]').addClass('active');
-      $('#content').load('../pages/' + page + '.html',function (){
+      $('#content').load('pages/' + page + '.html',function (){
         $('#content-shadow').height($('#content').height() + 40);
         $('#footer-wrapper').css('top',$('#content-shadow').height() + 240);      
       });
