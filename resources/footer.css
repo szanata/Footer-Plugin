@@ -138,11 +138,10 @@ body {
  * content styling
  */
 .title{
-	text-decoration:none;
 	color:#fff;
 	font-size:16px;
 	font-weight:bolder;	
-	padding:12px;
+	padding:10px;
 	margin:10px;
 	background-color:#000;
 	-moz-border-radius:4px;
@@ -153,12 +152,12 @@ body {
   
 }
 .text{
+  float:left;
   clear:both;
 	color:#E6820E;
 	text-align:left;
-	padding-left:20px;
-	font-size:15px;
-	font-weight:normal;
+	margin:10px;
+	font-size:14px;
 }
 .code{
 	text-align:left;
