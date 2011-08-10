@@ -58,12 +58,11 @@
 			}
 		</style>
 		
-		<script src="jquery-1.6.min.js" type="text/javascript"></script>
-		<script src="jquery.footer-1.1.min.js" type="text/javascript" ></script>
+		<script src="resources/jquery-1.6.min.js"></script>
+		<script src="resources/jquery.footer-1.1.min.js"></script>
+    
 		<script>
-			
 
-      
 			$(function(){
       	
 				function increase(what, howMuch){
@@ -78,20 +77,20 @@
 					}
 				}
 				
-				$("#menuShadow").width($("#menu").width() + 24);
+				$('#menuShadow').width($('#menu').width() + 24);
 				
-				$("#p1").bind("click", function(){increase("#content",1);});
-				$("#p10").bind("click", function(){increase("#content",10);});
-				$("#p100").bind("click", function(){increase("#content",100);});
+				$('#p1').bind('click', function (){increase('#content',1);});
+				$('#p10').bind('click', function (){increase('#content',10);});
+				$('#p100').bind('click', function (){increase('#content',100);});
 				
-				$("#m1").bind("click", function(){decrease("#content",1,150);});
-				$("#m10").bind("click", function(){decrease("#content",10,150);});
-				$("#m100").bind("click", function(){decrease("#content",100,150);});
+				$('#m1').bind('click', function (){decrease('#content',1,150);});
+				$('#m10').bind('click', function (){decrease('#content',10,150);});
+				$('#m100').bind('click', function (){decrease('#content',100,150);});
 				
-				$("#fp").bind("click",function(){increase("#footer",10);});
-				$("#fm").bind("click",function(){decrease("#footer",10,50);});
+				$('#fp').bind('click',function (){increase('#footer',10);});
+				$('#fm').bind('click',function (){decrease('#footer',10,50);});
 				
-				$("#footer").footer({timeOut:30});
+				$('#footer').footer();
 			});
 		</script>
     </head>
