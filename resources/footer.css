@@ -143,19 +143,19 @@ body {
 	padding:10px;
 	margin:10px;
 	background-color:#000;
+  float:left;
+  clear:both;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border-radius:4px;
-  float:left;
-  clear:both;
   
 }
 .text{
-  float:left;
   clear:both;
 	color:#E6820E;
 	text-align:left;
 	margin:5px 15px;
+  display:block;
 	font-size:14px;
 }
 .code{
