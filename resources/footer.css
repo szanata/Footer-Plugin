@@ -136,7 +136,7 @@ body {
 /**
  * content styling
  */
-.title{
+span.title{
 	color:#fff;
 	font-size:16px;
 	font-weight:bolder;	
@@ -148,9 +148,8 @@ body {
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border-radius:4px;
-  
 }
-.text{
+span.text{
   clear:both;
 	color:#E6820E;
 	text-align:left;
@@ -158,12 +157,15 @@ body {
   display:block;
 	font-size:14px;
 }
-.code{
+textarea.code{
+  clear:both;
+  display:block;
 	text-align:left;
-	margin:10px 0px 10px 40px;
+	margin:5px 20px;
 	font-family:Courier;
 	font-size:14px;
 	width:700px;
+  border:1px solid #000;
 }
 #content a,
 #content a:visited,
